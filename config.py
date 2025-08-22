@@ -39,11 +39,11 @@ API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 OWNER_ID = int(os.getenv("OWNER_ID", None))
-OWNER_USERNAME = os.getenv("OWNER_USERNAME", "WTF_WhyMeeh")
-BOT_USERNAME = os.getenv("BOT_USERNAME", "ShrutixMusicBot")
+OWNER_USERNAME = os.getenv("OWNER_USERNAME", "@GodxSharma")
+BOT_USERNAME = os.getenv("BOT_USERNAME", "@HydraxMusic_bot")
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# 🛠️ Database & Deployment Configs
+# 🛠 Database & Deployment Configs
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 MONGO_DB_URI = os.getenv("MONGO_DB_URI", None)
@@ -55,7 +55,7 @@ HEROKU_API_KEY = os.getenv("HEROKU_API_KEY")
 # 🔄 Git & Update Settings
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-UPSTREAM_REPO = os.getenv("UPSTREAM_REPO", "https://github.com/NoxxOP/ShrutiMusic")
+UPSTREAM_REPO = os.getenv("UPSTREAM_REPO", "https://github.com/Meenu9050/Ganna-Music-App-new-")
 UPSTREAM_BRANCH = os.getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = os.getenv("GIT_TOKEN", None)
 
@@ -63,10 +63,10 @@ GIT_TOKEN = os.getenv("GIT_TOKEN", None)
 # 🔗 Support Links
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-SUPPORT_CHANNEL = os.getenv("SUPPORT_CHANNEL", "https://t.me/ShrutiBots")
-SUPPORT_GROUP = os.getenv("SUPPORT_GROUP", "https://t.me/ShrutiBotSupport")
-INSTAGRAM = os.getenv("INSTAGRAM", "https://instagram.com/yaduwanshi_nand")
-YOUTUBE = os.getenv("YOUTUBE", "https://youtube.com/@NandEditz")
+SUPPORT_CHANNEL = os.getenv("SUPPORT_CHANNEL", "Hydrax_Music_update")
+SUPPORT_GROUP = os.getenv("SUPPORT_GROUP", "Hydrax_Music_update")
+INSTAGRAM = os.getenv("INSTAGRAM", "")
+YOUTUBE = os.getenv("YOUTUBE", "")
 GITHUB = os.getenv("GITHUB", "https://github.com/NoxxOP")
 DONATE = os.getenv("DONATE", "https://t.me/ShrutiBots/91")
 PRIVACY_LINK = os.getenv("PRIVACY_LINK", "https://graph.org/Privacy-Policy-05-01-30")
@@ -109,72 +109,5 @@ STRING5 = os.getenv("STRING_SESSION5", None)
 AUTO_LEAVING_ASSISTANT = bool(os.getenv("AUTO_LEAVING_ASSISTANT", False))
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# 🖼️ Image URLs (Can be customized)
+# 🖼 Image URLs (Can be customized)
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-START_IMG_URL = os.getenv("START_IMG_URL", "https://files.catbox.moe/7q8bfg.jpg")
-PING_IMG_URL = os.getenv("PING_IMG_URL", "https://files.catbox.moe/eehxb4.jpg")
-PLAYLIST_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-STATS_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-TELEGRAM_AUDIO_URL = "https://files.catbox.moe/eehxb4.jpg"
-TELEGRAM_VIDEO_URL = "https://files.catbox.moe/eehxb4.jpg"
-STREAM_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-SOUNCLOUD_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-YOUTUBE_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/eehxb4.jpg"
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# 🔐 User & Bot State Stores
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-BANNED_USERS = filters.user()
-adminlist = {}
-lyrical = {}
-votemode = {}
-autoclean = []
-confirmer = {}
-
-TEMP_DB_FOLDER = "tempdb"
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# ⏳ Time Conversion Utility
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-def time_to_seconds(time):
-    stringt = str(time)
-    return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
-
-DURATION_LIMIT = int(time_to_seconds(f"{DURATION_LIMIT_MIN}:00"))
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# ❌ Validate Support Links
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-if SUPPORT_CHANNEL:
-    if not re.match(r"(?:http|https)://", SUPPORT_CHANNEL):
-        raise SystemExit(
-            "[ERROR] - SUPPORT_CHANNEL URL is invalid. It must start with https://"
-        )
-
-if SUPPORT_GROUP:
-    if not re.match(r"(?:http|https)://", SUPPORT_GROUP):
-        raise SystemExit(
-            "[ERROR] - SUPPORT_GROUP URL is invalid. It must start with https://"
-        )
-
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-#     ✅ CONFIG LOADED SUCCESSFULLY | Designed By @WTF_WhyMeeh
-# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-# ©️ Copyright Reserved - @NoxxOP  Nand Yaduwanshi
-
-# ===========================================
-# ©️ 2025 Nand Yaduwanshi (aka @NoxxOP)
-# 🔗 GitHub : https://github.com/NoxxOP/ShrutiMusic
-# 📢 Telegram Channel : https://t.me/ShrutiBots
-# ===========================================
-
-
-# ❤️ Love From ShrutiBots 
