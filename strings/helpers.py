@@ -375,6 +375,16 @@ HELP_37 = """🤖 <b>ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ᴛʜᴇsᴇ ʙᴏᴛs</b> �
 
 ✨ <b>ᴜsᴇ ᴛʜᴇsᴇ ʙᴏᴛs ᴛᴏ ᴇɴᴊᴏʏ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ ғᴜʟʟʏ.</b>"""
 
+HELP_38 = """🤖 <b>Chatbot Control</b>  
+
+• /chatbot - Open the inline control panel for the chatbot  
+
+<b>Available Options:</b>  
+✅ Enable Chatbot → Bot will automatically reply in the group  
+❌ Disable Chatbot → Bot will remain silent in the group  
+ℹ️ Status → Check the current chatbot mode  
+"""
+
 # ©️ Copyright Reserved - @NoxxOP  Nand Yaduwanshi
 
 # ===========================================
